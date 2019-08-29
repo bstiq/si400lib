@@ -7,7 +7,7 @@ Code was verified with the [wemake python styleguide](https://github.com/wemake-
 
 The SQL Wrapper can also be used with other SQL databases, as such:
 
-```
+```python
 # example with an oracle database
 yield 'SELECT * from :tableName', {'tableName': table_name}
 ```
