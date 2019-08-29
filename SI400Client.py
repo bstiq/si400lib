@@ -11,11 +11,9 @@ class SI400Client():
             CommitMode=0)
         self.connect(schema)
 
-    def connect(self, schema=None):
-        if schema is not None:
-            self.current_schema = schema
-            self.cursor = self.__connection.cursor()
-            self.cursor.execute("SET CURRENT SCHEMA " + schema)
+    def connect(self, schema):
+        self.cursor = self.__connection.cursor()
+        self.cursor.execute("SET CURRENT SCHEMA " + schema)
 
     def execute(self, instruction, values=None):
         if values is None:

@@ -1,7 +1,6 @@
 def sql_wrapper(func):
     def wrapper_sql_executor(*args, **kwargs):
         clazz = args[0]
-        clazz.connect()
         results = []
 
         for res in func(*args, **kwargs):
